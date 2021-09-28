@@ -12,4 +12,21 @@
 - Master node is responsible for plan, schdule containers workloads
 - Master Node made up of following components
   - etcd
-  -  
+  - API Server
+  - Controller Manager
+  - Schdeuler
+- worker node responsible for running containerized application
+- worker node components
+  - Kubelet   
+  - kubeproxy
+- etcd --> is distributed key value store
+  - kubernates store all cluster data . Following objects data are stored in etcd
+     - Nodes, Pods, Config , Secrets , Accounts, Roles
+  - 2379 is etcd port
+- KubeAPI Server - Exposes Kubernates API
+  - Authenticates User
+  - Validate Request
+  - Retrive Data
+  - Update ETCD
+  - Scheduler
+  - Kubelet    
