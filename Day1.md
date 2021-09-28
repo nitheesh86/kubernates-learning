@@ -29,4 +29,16 @@
   - Retrive Data
   - Update ETCD
   - Scheduler
-  - Kubelet    
+  - Kubelet
+- Controller Manager - runs as a single process
+   - Node controller - Responsible checking nodes health
+   - job controller - Responsible for creating Pods
+   - Endpoints controller - Populates the Endpoints object (that is, joins Services & Pods).
+   - Service Account and Token controller - reate default accounts and API access tokens for new namespaces.
+- Kube Scduler : Decides which pod goes where but don't places pods on the nodes
+- Kubelet
+  - Acts as captain of the ship and runs as an agent on worker node
+  - Places pods on the containers
+- kubeproxy
+  - It is network proxy and use iptables to controll the flow of traffic
+  - deployed as dameon set 
